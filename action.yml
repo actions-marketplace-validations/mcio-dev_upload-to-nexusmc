@@ -1,6 +1,6 @@
 name: 'Upload to NexusMC'
 description: 'Upload file to NexusMC to update resource'
-author: 'NexusMC'
+author: 'mcio-dev'
 branding:
   icon: 'upload'
   color: 'blue'
