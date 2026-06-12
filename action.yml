@@ -1,0 +1,78 @@
+name: 'Upload to NexusMC'
+description: 'Upload file to NexusMC to update resource'
+author: 'NexusMC'
+branding:
+  icon: 'upload'
+  color: 'blue'
+
+inputs:
+  api_token:
+    description: 'NexusMC Personal API Token'
+    required: true
+    type: string
+  resource_id:
+    description: 'NexusMC Resource ID'
+    required: true
+    type: string
+  file_path:
+    description: 'Path to the file to upload'
+    required: true
+    type: string
+  version:
+    description: 'Resource version number'
+    required: false
+    type: string
+  version_title:
+    description: 'Version title'
+    required: false
+    type: string
+  changelog:
+    description: 'Changelog for the new version'
+    required: false
+    type: string
+  publish_version:
+    description: 'Whether to publish as a new version'
+    required: false
+    default: 'true'
+    type: boolean
+  mc_versions:
+    description: 'Supported Minecraft versions (JSON array)'
+    required: false
+    type: string
+  tags:
+    description: 'Custom tags (JSON array)'
+    required: false
+    type: string
+  official_tags:
+    description: 'Official tags (JSON array)'
+    required: false
+    type: string
+  cover_image_path:
+    description: 'Path to cover image file'
+    required: false
+    type: string
+  tutorial_post_ids:
+    description: 'Tutorial post IDs (JSON array)'
+    required: false
+    type: string
+  documentation_post_refs:
+    description: 'Documentation post references (JSON array)'
+    required: false
+    type: string
+  documentation_url:
+    description: 'External documentation URL'
+    required: false
+    type: string
+  dependencies:
+    description: 'Dependencies (JSON array)'
+    required: false
+    type: string
+  is_draft:
+    description: 'Save as draft'
+    required: false
+    default: 'false'
+    type: boolean
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
